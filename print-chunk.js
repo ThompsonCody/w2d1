@@ -1,4 +1,4 @@
-function getAndPrintHTMLChunks() {
+/*function getAndPrintHTMLChunks() {
 
   const http = require('http');
   let resStr = '';
@@ -27,6 +27,31 @@ function getAndPrintHTMLChunks() {
 
   let req = http.request(reqOptions, callback).end();
 
+}
+
+getAndPrintHTMLChunks();*/
+
+const http = require('http');
+
+var getAndPrintHTMLChunks = () => {
+
+  let resStr = '';
+
+  let requestOptions = {
+    host: 'sytantris.github.io',
+    path: '/http-examples/step1.html'
+  };
+
+  let request = http.request(requestOptions, (response) => {
+    response.on('data', (chunk) => {
+      console.log("--- I have some data chunk's jam'n baby ---\n", chunk);
+      resStr += chunk;
+    });
+    response.on('end', () => {
+      console.log('-- response body --\n', resStr);
+      console.log(request.data);
+    });
+  }).end();
 }
 
 getAndPrintHTMLChunks();

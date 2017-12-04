@@ -1,7 +1,6 @@
 {
   "name": "w2d1",
   "version": "1.0.0",
-  "description": "",
   "main": "print-chunk.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,5 +9,14 @@
   "license": "ISC",
   "dependencies": {
     "request": "^2.83.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThompsonCody/w2d1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ThompsonCody/w2d1/issues"
+  },
+  "homepage": "https://github.com/ThompsonCody/w2d1#readme",
+  "description": ""
 }
